@@ -1,0 +1,41 @@
+<div style="text-align:center">
+  <h4>Добро пожаловать в игрy "Крестики-Нолики"</h4>
+  <h6> Введите пожалуйста Имя, под которым будете играть</h6>
+  <input [(ngModel)]="nameGamer">
+  <h6>
+    Вива ля игрок {{ nameGamer }}!
+  </h6>
+  <h6>Немного оправилах. Тот кто начинает партию, играет крестиками <br>
+    Если вы присоеденяетесь к партии, то играете ноликом.<br>
+    Размер поля выбирает создающий партию. Размер варьируется от 3 до 10 клеток стороны квадрата. <br>
+  Выигрышный сет тоже выбирает создающим партию. Он может быть либо 3 символа подряд, <br>
+   либо 5 символов подряд. <br>
+   Игра заканчивается либо после победы одного из игроков, либо после 5 минутного ожидания следующего хода <br>
+    Удачной игры! </h6>
+</div>
+<div style="text-align:center">
+<h5>Вы можете присоедениться к уже созданной партии: {{ selectSes }} </h5>
+<p *ngIf="flErrSess">{{errSessText}}</p>
+<button class="btn btn-info" (click)="GetActSess()">Проверить активные сессии</button>
+&nbsp;&nbsp;
+<select [(ngModel)]="selectActSes1" (change)="selectSessCh(value)" (click)="clickSess()" *ngIf="flelectSess"  >
+  <option value="">Текущие партии</option>
+  <option *ngFor="let selectAct of _selectActSes" ng-init="remActiveS" [value]="selectAct.id">{{selectAct.name}}</option>
+</select>
+&nbsp;&nbsp;
+<button class="btn btn-info" (click)="GetOnSess()" *ngIf="flelectSess">{{textButGet}}</button>
+</div>
+<div style="text-align:center">
+  <h5>Или создать и начать свою </h5>
+  <p>Выберите размер стороны поля:
+  <select [(ngModel)]="selectSizePole" (change)="selectPoleCh(selectSizePole)" >
+    <option *ngFor="let size of sizePoles" [value]="size.id" >{{size.name}}</option>
+  </select></p>
+  <p>Выберите размер выигрышной комбинации:
+  <select [(ngModel)]="selectSizeKomb"  >
+    <option  selected value="1" >3</option>
+    <option *ngIf="flSizeWin"  value="2" >5</option>
+  </select> </p>
+  <button class="btn btn-info" (click)="NewGame()">Создать игру</button>
+  <h4 *ngIf="flServerNot">Нет в этом мире сервера для Вас! Но надежда может творить чудеса. Попробуйте позже.</h4>
+  </div>

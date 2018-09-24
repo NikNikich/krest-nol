@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="centerdiv">
+    <h4> "Крестики-Нолики"</h4>
+    <p>
+    ЗА крестики (Х) отвечает <strong>{{gamerX}}</strong>.  ЗА нолики (О) отвечает <strong> {{gamerO}}</strong>.
+    </p>
+    <p>
+      Длина выигрышной комбинации <strong>{{preopGame[2]}}</strong> 
+     </p>
+    <p>
+      Ходит <strong>{{ gamerNow}}</strong>
+    </p>
+    <p>
+     Время текущего хода - {{timeClick[1]}}:{{Secunds}};
+    </p>
+    <p *ngIf="flServerNot">Сервер что-то ноу</p>
+     <div class="clGame" [appDivWidth]="widthXPole">
+         <div *ngFor="let divP of divPreop" #nom [appDivWidth]="widthXCont" [(id)]="divP.nameD" [class]="divP.class" (click)="ContClick(nom)" >
+             <p>{{divP.value}}</p>
+           </div>
+      </div>
+  </div>
+</div>

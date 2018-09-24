@@ -1,0 +1,49 @@
+.clGame{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: powderblue;
+    vertical-align: middle;
+    justify-content: center;
+    position: relative;
+}
+.contO{
+    border: 4px double black;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    display: flex;
+    align-items: center
+}
+.contO p{
+    margin: 0px;
+     color: rgb(52, 60, 128);
+     font-size:60px;
+}
+.contX{
+    border: 4px double black;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    display: flex;
+    align-items: center
+}
+.contX p{
+    margin: 0px;
+    vertical-align: middle;
+     color: red;
+     font-size: 60px;
+}
+.contNull{
+    border: 4px double black;
+    float: left;
+    vertical-align: middle;
+    justify-content: center;
+}
+.contNull:hover{
+    border: 4px double gray;
+}
+.centerdiv{
+    text-align: center;
+}

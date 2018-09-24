@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="centerdiv" >
+      <h4> "Крестики-Нолики"</h4>
+      <div *ngIf="flNeopred">
+          <h2> Победитель не определён </h2>
+      </div>
+      <div  *ngIf="!flNeopred">
+        <p>
+         Выиграл<strong>{{gamer}}</strong>.  
+        </p>
+           <div class="clGame" [appDivWidth]="widthXPole">
+              <div *ngFor="let divP of divPreop" #nom [appDivWidth]="widthXCont" [(id)]="divP.nameD" [class]="divP.class"  >
+               <p>{{divP.value}}</p>
+              </div>
+           </div>
+       </div>
+       <br>
+       <button class="btn btn-info" (click)="OsnStr()">Главная страница, тоесть первоначальная</button>
+    </div>
+  </div>

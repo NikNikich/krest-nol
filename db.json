@@ -1,0 +1,74 @@
+{
+  "state": {
+    "status": "ok",
+    "you_turn": false,
+    "long_win": 5,
+    "game_duration": 2342,
+    "field": [
+      "X?????",
+      "??????",
+      "??????",
+      "??????",
+      "??????",
+      "??????"
+    ],
+    "winner": ""
+  },
+  "make_a_move": {
+    "row": 0,
+    "col": 0
+  },
+  "new_game": {
+    "user_game": "Ваш псевдоним",
+    "csizeP": 3,
+    "sizeV": 3
+  },
+  "join_game": {
+    "game_token": "88769",
+    "user_game": "Ваш псевдоним"
+  },
+  "join_game_n": {
+    "row": 2,
+    "col": 1
+  },
+  "gamesess": [
+    {
+      "id": "88769",
+      "user1": "Боря",
+      "user2": "?????",
+      "flag": "true"
+    },
+    {
+      "id": "13273",
+      "user1": "Санёк",
+      "user2": "?????",
+      "flag": "true"
+    },
+    {
+      "id": "63854",
+      "user1": "Миша",
+      "user2": "?????",
+      "flag": "true"
+    },
+    {
+      "id": "88888",
+      "user1": "Анна Игоревна",
+      "user2": "?????",
+      "flag": "true"
+    }
+  ],
+  "join_thisGame": {
+    "status": "yes",
+    "user": "Vova"
+  },
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
